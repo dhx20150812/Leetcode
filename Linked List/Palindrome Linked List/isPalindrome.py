@@ -26,12 +26,15 @@ class Solution(object):
         :type head: ListNode
         :rtype: bool
         """
+        """
+        通过将链表的后半部分逆置，然后逐一和前半部分进行比较
+        """
         if head is None:
             return True
         if head and head.next is None:
             return True
         fast = slow = head
-        while fast and fast.next:
+        while fast and fast.next: # 快慢指针法寻找链表的中点
             fast = fast.next.next
             slow = slow.next
         if fast is None:#偶数
