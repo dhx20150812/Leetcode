@@ -11,8 +11,5 @@ class Solution(object):
             if nums[x-1]>0:
                 cnt += 1
                 nums[x-1] = -nums[x-1]
-        ret = []
-        for index,x in enumerate(nums):
-            if x>0:
-                ret.append(index+1)
+        ret = [index+1 for index,x in enumerate(nums) if x>0]
         return ret
