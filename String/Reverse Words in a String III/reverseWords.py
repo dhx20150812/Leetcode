@@ -10,3 +10,4 @@ class Solution(object):
         for i,item in enumerate(arr):
             arr[i] = arr[i][::-1]
         return ' '.join(arr)
+        # return ' '.join([item[::-1] for item in s.split(' ')])
